@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Python app</title>
+<style>
+body  {
+    background-image: url("/static/pics/ccpp.jpg");
+	background-size: cover;
+}
+h3 { 
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+form{
+text-align:center
+}
+label{
+font-size: 20px;
+display: inline-block;
+width: 200px;
+text-align: right;
+}
+input[type=submit]
+{
+background-color:black;
+color:white;
+}
+</style>
+</head>
+<body>
+<center><h1><p>COMBINED CYCLE POWER PLANT ENERGY OUTPUT PREDICTION</p></h1></center>
+<form action="{{url_for('Home')}}" method="POST">
+<label for="temp"><b>Temperature : </b></label>
+<input type="text" id="temp", name="tem", required="required",placeholder="Enter the temperature..." style="height:30px"/>
+<br></br>
+<br></br>
+<label for="exv"><b>Exhaust vaccum : </b></label>
+<input type="text" id="exv", name="ex", required="required" style="height:30px"/>
+<br></br>
+<br></br>
+<label for="Amp"><b>Ambient pressure : </b></label>
+<input type="text" id="temp", name="Am", required="required" style="height:30px"/>
+<br></br>
+<br></br>
+<label for="Relhum"><b>Relative humidity : </b></label>
+<input type="text" id="temp", name="hum", required="required" style="height:30px"/>
+<br></br>
+<label></label>
+<input id="SUBMIT" type="submit" value="PREDICT" style="height:50px;width:100px"/>
+</form>
+<br></br>
+<h3>{{data}}</h3>
+</body>
+</html>
